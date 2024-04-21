@@ -253,7 +253,7 @@ export default function Home() {
                 component="p"
                 className="text-lg text-gray-600 mb-8 text-center"
               >
-                Fill out the form below, and we'll get back to you as soon as
+                Fill out the form below, and we&apos;ll get back to you as soon as
                 possible.
               </Typography>
               <Box

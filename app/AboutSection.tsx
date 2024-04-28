@@ -2,7 +2,7 @@
 import React from 'react'
 
 export default function AboutSection() {
-  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: React.SetStateAction<string>) => {
+  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
     event.preventDefault();
     const section = document.getElementById(sectionId);
     if (section)

@@ -13,27 +13,24 @@ export default function Home() {
                 <section id="home" className="bg-black/40">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center">
                         <div className="text-center md:text-left mb-8 md:mb-0 md:mr-8">
-                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ textAlign: 'center' }}>
                                 Unleash Your Business&apos;s Online Potential
                             </h1>
-                            <p className="text-lg text-gray-300 mb-8">
-                                We craft captivating single-page websites that drive leads and elevate
-                                your online presence.
+                            <p className="text-lg text-gray-300 mb-8" style={{ textAlign: 'center' }}>
+                                Our expertise lies in crafting captivating single-page websites that not only enhance your online presence but also drive valuable leads your way. Let us create a digital masterpiece that elevates your brand and leaves a lasting impression on your audience.
                             </p>
-                            <form className="flex flex-col md:flex-row items-center justify-center md:justify-start">
-                                <input
-                                    type="email"
-                                    required
-                                    placeholder="Enter your email"
-                                    className="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none"
-                                />
-                                <button
-                                    type="submit"
-                                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-r-md hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300"
-                                >
-                                    Get Started
-                                </button>
-                            </form>
+                            <div className="flex justify-center flex-col sm:flex-row">
+  <button
+    className="bg-transparent hover:text-black hover:bg-white text-gray-300 py-2 px-4 border border-white-700 rounded mb-4 sm:mb-0 sm:mr-4"
+  >
+    Get Started!
+  </button>
+  <button
+    className="bg-white text-black hover:bg-blue-400 py-2 px-4 border border-white-700 rounded"
+  >
+    Learn More
+  </button>
+</div>
                         </div>
                     </div>
                 </section>

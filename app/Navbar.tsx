@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} flex flex-col md:flex-row`} >
       <div className={styles.logoContainer}>
         <div className={styles.logo}>
           <Link href="/">
@@ -23,40 +23,42 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <ul className={styles.navLinks}>
-        <li>
-          <a
-            className={`${styles.navLink} cursor-pointer ${activeLink === 'home' ? styles.active : ''}`}
-            onClick={(event) => scrollToSection(event, 'home')}
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            className={`${styles.navLink} cursor-pointer ${activeLink === 'about' ? styles.active : ''}`}
-            onClick={(event) => scrollToSection(event, 'about')}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            className={`${styles.navLink} cursor-pointer ${activeLink === 'services' ? styles.active : ''}`}
-            onClick={(event) => scrollToSection(event, 'services')}
-          >
-            Services
-          </a>
-        </li>
-        <li>
-          <a
-            className={`${styles.navLink} cursor-pointer ${activeLink === 'contact' ? styles.active : ''}`}
-            onClick={(event) => scrollToSection(event, 'contact')}
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+      <div>
+        <ul className={styles.navLinks}>
+          <li>
+            <a
+              className={`${styles.navLink} cursor-pointer ${activeLink === 'home' ? styles.active : ''}`}
+              onClick={(event) => scrollToSection(event, 'home')}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${styles.navLink} cursor-pointer ${activeLink === 'about' ? styles.active : ''}`}
+              onClick={(event) => scrollToSection(event, 'about')}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${styles.navLink} cursor-pointer ${activeLink === 'services' ? styles.active : ''}`}
+              onClick={(event) => scrollToSection(event, 'services')}
+            >
+              Services
+            </a>
+          </li>
+          <li>
+            <a
+              className={`${styles.navLink} cursor-pointer ${activeLink === 'contact' ? styles.active : ''}`}
+              onClick={(event) => scrollToSection(event, 'contact')}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

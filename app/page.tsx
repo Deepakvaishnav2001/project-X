@@ -14,7 +14,7 @@ export default function Home() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center">
                         <div className="text-center md:text-left mb-8 md:mb-0 md:mr-8">
                             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                                Unleash Your Business's Online Potential
+                                Unleash Your Business&apos;s Online Potential
                             </h1>
                             <p className="text-lg text-gray-300 mb-8">
                                 We craft captivating single-page websites that drive leads and elevate

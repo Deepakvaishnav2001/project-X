@@ -1,172 +1,92 @@
-import {
-  Box,
-  Button,
-  Typography,
-  Container,
-  Grid,
-  Card,
-  CardContent
-} from '@mui/material'
-import ContactForm from './ContactForm';
+import Navbar from "./Navbar"
+import { VideoBackground } from "./VideoBackground"
+import ContactForm from "./ContactForm"
+import AboutSection from "./AboutSection"
 
 export default function Home() {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-grow">
-      <section className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-20">
-          <Container maxWidth="lg">
-            <Box className="max-w-3xl mx-auto text-center">
-              <Typography
-                variant="h1"
-                component="h1"
-                className="text-4xl font-bold text-white mb-6"
-              >
-                Welcome to Our Business
-              </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                className="text-lg text-white mb-8"
-              >
-                We offer custom single-page lead generation websites for small
-                businesses.
-              </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                href="#contact"
-                className="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white"
-              >
-                Get Started
-              </Button>
-            </Box>
-          </Container>
-        </section>
 
-        {/* Services Section */}
-        <section className="py-20" id="services">
-          <Container maxWidth="lg">
-            <Box className="text-center mb-12">
-              <Typography
-                variant="h2"
-                component="h2"
-                className="text-3xl font-bold mb-4"
-              >
-                Our Services
-              </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                className="text-lg text-gray-600"
-              >
-                We offer a wide range of services to meet your business needs.
-              </Typography>
-            </Box>
-            <Grid container spacing={4}>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <CardContent className="p-6">
-                    <Typography
-                      variant="h3"
-                      component="h3"
-                      className="text-xl font-bold mb-4"
-                    >
-                      Custom Website Design
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      component="p"
-                      className="text-gray-600"
-                    >
-                      We create stunning, responsive, and user-friendly websites
-                      tailored to your business needs.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <CardContent className="p-6">
-                    <Typography
-                      variant="h3"
-                      component="h3"
-                      className="text-xl font-bold mb-4"
-                    >
-                      Lead Generation
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      component="p"
-                      className="text-gray-600"
-                    >
-                      Our websites are designed to capture leads and convert
-                      them into customers for your business.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6} md={4}>
-                <Card className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <CardContent className="p-6">
-                    <Typography
-                      variant="h3"
-                      component="h3"
-                      className="text-xl font-bold mb-4"
-                    >
-                      Search Engine Optimization
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      component="p"
-                      className="text-gray-600"
-                    >
-                      We optimize your website for search engines, ensuring
-                      maximum visibility and organic traffic.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            </Grid>
-          </Container>
-        </section>
-
-        {/* About Section */}
-        <section className="py-20 bg-gray-100" id="about">
-          <Container maxWidth="lg">
-            <Box className="max-w-3xl mx-auto">
-              <Typography
-                variant="h2"
-                component="h2"
-                className="text-3xl font-bold mb-6 text-center"
-              >
-                About Us
-              </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                className="text-lg text-gray-600 mb-8"
-              >
-                We are a team of passionate designers and developers dedicated to
-                creating innovative and effective solutions for small businesses.
-                Our goal is to help you stand out in a crowded market and
-                attract more customers through stunning websites and effective
-                lead generation strategies.
-              </Typography>
-              <Box className="flex justify-center">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  href="#contact"
-                  className="bg-indigo-500 text-white hover:bg-white hover:text-indigo-500"
-                >
-                  Get in Touch
-                </Button>
-              </Box>
-            </Box>
-          </Container>
-        </section>
-        <ContactForm />
-      </main>
-    </div>
-  )
+    return (
+        <div className="relative">
+            <VideoBackground />
+            <Navbar />
+            <div id="__next" className="relative z-10">
+                <section id="home" className="bg-black/40">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center">
+                        <div className="text-center md:text-left mb-8 md:mb-0 md:mr-8">
+                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                                Unleash Your Business's Online Potential
+                            </h1>
+                            <p className="text-lg text-gray-300 mb-8">
+                                We craft captivating single-page websites that drive leads and elevate
+                                your online presence.
+                            </p>
+                            <form className="flex flex-col md:flex-row items-center justify-center md:justify-start">
+                                <input
+                                    type="email"
+                                    required
+                                    placeholder="Enter your email"
+                                    className="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none"
+                                />
+                                <button
+                                    type="submit"
+                                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-r-md hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300"
+                                >
+                                    Get Started
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section id="about" className="bg-black/20">
+                    <AboutSection />
+                </section>
+                <section id="services" className="bg-black/40">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-3xl font-bold mb-4 text-center text-white">
+                            Our Services
+                        </h2>
+                        <p className="text-lg text-gray-300 text-center mb-8">
+                            We offer a wide range of services to meet your business needs.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold mb-4 text-white">
+                                        Custom Website Design
+                                    </h3>
+                                    <p className="text-gray-300">
+                                        We create stunning, responsive, and user-friendly websites tailored
+                                        to your business needs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold mb-4 text-white">
+                                        Lead Generation
+                                    </h3>
+                                    <p className="text-gray-300">
+                                        Our websites are designed to capture leads and convert them into
+                                        customers for your business.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold mb-4 text-white">
+                                        Search Engine Optimization
+                                    </h3>
+                                    <p className="text-gray-300">
+                                        We optimize your website for search engines, ensuring maximum
+                                        visibility and organic traffic.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                < ContactForm />
+            </div>
+        </div>
+    )
 }

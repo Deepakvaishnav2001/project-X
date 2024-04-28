@@ -79,7 +79,7 @@ export default function ContactForm() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold mb-4 text-white text-center">Get in Touch</h2>
         <p className="text-lg text-gray-300 mb-8 text-center">
-          Fill out the form below, and we'll get back to you as soon as possible.
+          Fill out the form below, and we&apos;ll get back to you as soon as possible.
         </p>
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
           <div>

@@ -12,7 +12,7 @@ interface NavbarProps {
 const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   const [activeLink, setActiveLink] = useState('home');
 
-  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+  const scrollToSection = (event: React.MouseEvent, sectionId: string) => {
     scrollToSectionhook(event,sectionId)
     setActiveLink(sectionId);
   };

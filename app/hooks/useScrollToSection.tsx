@@ -1,7 +1,6 @@
-// useScrollToSection.tsx
 import { MouseEvent } from 'react';
 
-const scrollToSection = (event: MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+const scrollToSection = (event: MouseEvent, sectionId: string) => {
   event.preventDefault();
   const section = document.getElementById(sectionId);
   if (section)

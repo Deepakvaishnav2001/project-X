@@ -17,7 +17,7 @@ export default function AboutSection() {
       </p>
       <div className="flex justify-center">
         <button
-          onClick={(e) => scrollToSection(e: MouseEvent<HTMLAnchorElement, MouseEvent>, 'contact')}
+          onClick={(e) => scrollToSection(e, 'contact')}
           className="bg-white text-black font-bold py-2 px-4 cursor-pointer rounded-full hover:bg-gray-200 transition-colors duration-300"
         >
           Get in Touch

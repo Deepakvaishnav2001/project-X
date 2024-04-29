@@ -1,13 +1,9 @@
 "use client"
-import React from 'react'
+import React from 'react';
+import scrollToSection from '../hooks/useScrollToSection';
 
 export default function AboutSection() {
-  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
-    event.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section)
-      section.scrollIntoView({ behavior: 'smooth' });
-  };
+  
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold mb-6 text-center text-white">
@@ -20,12 +16,12 @@ export default function AboutSection() {
         stunning websites and effective lead generation strategies.
       </p>
       <div className="flex justify-center">
-        <a
-          onClick={(event) => scrollToSection(event, 'contact')}
+        <button
+          onClick={(e) => scrollToSection(e, 'contact')}
           className="bg-white text-black font-bold py-2 px-4 cursor-pointer rounded-full hover:bg-gray-200 transition-colors duration-300"
         >
           Get in Touch
-        </a>
+        </button>
       </div>
     </div>
   )

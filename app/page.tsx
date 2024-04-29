@@ -6,7 +6,7 @@ import HomeSection from "./components/HomeSection"
 import ContactForm from "./components/ContactSection"
 import AboutSection from "./components/AboutSection"
 import ProgressBar from './components/ProgressBar';
-import ServicesSection from "./components/ServicesSection"
+import Services1Section from "./components/Services1Section"
 
 export default function Home() {
 
@@ -22,7 +22,7 @@ export default function Home() {
                     < HomeSection />
                 </section>
                 <section id="services" className="bg-black/40">
-                   < ServicesSection />
+                   < Services1Section />
                 </section>
                 <section id="about" className="bg-black/20">
                     <AboutSection />

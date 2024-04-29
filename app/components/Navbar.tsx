@@ -20,24 +20,19 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   const handleScroll = useCallback(() => {
     if (scrollContainerRef.current) {
       const sections = scrollContainerRef.current.querySelectorAll('section');
-      const scrollPosition =
-        scrollContainerRef.current.scrollTop ||
-        scrollContainerRef.current.scrollY;
-
+      const scrollPosition = scrollContainerRef.current.scrollTop;
+  
       sections.forEach((section: { offsetTop: any; offsetHeight: any; id: string; }) => {
         const sectionTop = section.offsetTop;
         const sectionBottom = sectionTop + section.offsetHeight;
-
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionBottom
-        ) {
+  
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           setActiveLink(section.id);
         }
       });
     }
   }, [scrollContainerRef]);
-
+  
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
     if (scrollContainer) {
@@ -45,7 +40,6 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
       return () => scrollContainer.removeEventListener('scroll', handleScroll);
     }
   }, [scrollContainerRef, handleScroll]);
-
 
   return (
     <nav className={`${styles.navbar} flex flex-col md:flex-row`} >

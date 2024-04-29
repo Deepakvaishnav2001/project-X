@@ -1,6 +1,11 @@
 import React, { useEffect, useCallback, useState } from 'react';
+import { RefObject } from 'react';
 
-const ProgressBar = ({ scrollContainerRef }) => {
+interface NavbarProps {
+  scrollContainerRef: RefObject<HTMLElement>;
+}
+
+const ProgressBar = ({ scrollContainerRef}: NavbarProps ) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = useCallback(() => {

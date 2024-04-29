@@ -3,8 +3,13 @@ import React, { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import scrollToSectionhook from '../hooks/useScrollToSection';
+import { RefObject } from 'react';
 
-const Navbar = ({ scrollContainerRef }) => {
+interface NavbarProps {
+  scrollContainerRef: RefObject<HTMLElement>;
+}
+
+const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   const [activeLink, setActiveLink] = useState('home');
 
   const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {

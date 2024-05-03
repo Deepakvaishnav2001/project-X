@@ -1,0 +1,99 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  position: sticky;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+  border-top: 1px solid #fff
+}
+
+.logoText {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.FooterLinks {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.FooterLinks li {
+  margin: 0 .75rem;} 
+
+.FooterLink {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.footer .container {
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - 156px);
+  max-width: 1294px;
+  position: relative;
+}
+.footer .footer-grid {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer .footer-logo {
+  margin-right: auto;
+}
+.footer .footer-newsletter {
+  margin: 0 1rem 0 0;
+}
+.footer .btn-outline {
+  color: #33475b;
+  background: transparent;
+  border: 1px solid var(--foreground, hsla(0, 0%, 100%, .5));
+  border-radius: 36px;
+}
+.footer .btn-standard {
+  outline: none;
+  -webkit-appearance: none;
+} 
+.footer .btn {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+  padding: .75rem 2.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-radius: .25rem;
+  transform: perspective(1px) translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: auto;
+  transition: all .2s ease;
+}
+
+.footer .btn-outline {
+  color: #33475b;
+  background: transparent;
+  border: 1px solid var(--foreground,hsla(0,0%,100%,.5));
+  border-radius: 36px
+}
+
+.footer .btn-outline span {
+  color: var(--foreground,#fff)
+}
+
+.footer .btn-outline:hover,.btn-primary:hover {
+  transform: scale(1.05)
+}

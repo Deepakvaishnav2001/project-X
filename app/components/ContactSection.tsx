@@ -1,9 +1,35 @@
-"use client"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-export default function ContactForm() {
+const ContactSection = () => {
+  const [showForm, setShowForm] = useState(false);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
+  return (<div className='flex flex-col flex-grow justify-center items-center'>
+    {!showForm ? (<>
+    <h1 className="text-white text-4xl font-bold text-center mb-8" style={{ margin: "0 0 .65em", fontSize: "82px" }}>
+      Let&apos;s work together
+      </h1>
+      <p className="text-black text-center" style={{ maxWidth: "900px", margin: "0 auto", fontSize: "30px", lineHeight: "1.5", color: "var(--foreground)" }}>
+        We&apos;re addicts for the high we get when launching apps we&apos;re proud of. If you&apos;re ready to dig in and make some magic together, drop us a line.
+        </p>
+      <button className="bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-300" style={{ margin: "4rem 0 0", padding: ".75rem 2.5rem", fontSize: "20px", fontWeight: "500", border: "1px solid transparent" }} onClick={toggleForm} >
+        Get in touch
+        </button>
+        </>
+    ) :
+      < ContactForm />
+    }
+  </div>);
+}
+
+const ContactForm = () => {
+
   const [formData, setFormData] = useState({
     name: '',
+    company: '',
     email: '',
     message: '',
   })
@@ -65,7 +91,7 @@ export default function ContactForm() {
         });
       if (response.ok && response.status == 200 && response.statusText == 'OK') {
         setSuccessMessage('Contact form submitted successfully!')
-        setFormData({ name: '', email: '', message: '' })
+        setFormData({ name: '', email: '', message: '', company: ''})
       } else {
         throw true
       }
@@ -74,58 +100,192 @@ export default function ContactForm() {
     }
   }
 
+
   return (
     <>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-4 text-white text-center">Get in Touch</h2>
-        <p className="text-lg text-gray-300 mb-8 text-center">
-          Fill out the form below, and we&apos;ll get back to you as soon as possible.
-        </p>
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              className={`w-full bg-gray-800 text-white px-4 py-2 rounded-md focus:outline-none ${formErrors.name ? 'border-red-500' : ''}`}
-            />
-            {formErrors.name && <p className="text-red-500 mt-1">{formErrors.name}</p>}
+            <h1 className="font-bold mb-8 text-white" style={{ fontSize: "5.75rem" }}>
+              <div>
+                <p style={{ marginBottom: "0.8em", fontWeight: "400", fontSize: "5.75rem" }}>
+                  <span style={{ opacity: "1" }}>
+                    <span style={{ display: "inline-flex", overflow: "hidden" }}>
+                      <span style={{ position: "relative", opacity: "1", transform: "none" }}>Say&nbsp;
+                      </span>
+                    </span>
+                    <span style={{ display: "inline-flex", overflow: "hidden" }}>
+                      <span style={{ position: "relative", opacity: "1", transform: "none" }}>hello&nbsp;
+                      </span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </h1>
+            <div className="text-white mb-8">
+              <p style={{ fontSize: "1.5rem", color: "rgb(255 255 255 / var(--tw-text-opacity))", transition: "color .5s ease-in-out", marginBottom: "1.3em", fontWeight: "400" }}>Ready to create your dream app?
+              </p>
+              <p style={{ fontSize: "1.5rem", color: "rgb(255 255 255 / var(--tw-text-opacity))", transition: "color .5s ease-in-out", marginBottom: "1.3em", fontWeight: "400" }}>We&apos;re your one-stop-shop for everything you need to launch a lovable digital product.
+              </p>
+            </div>
+            <div style={{ margin: "1.5rem 0 1.5rem" }}>
+              <h2 className="text-white text-xl font-bold mb-2">
+                Careers
+              </h2>
+              <a href="/about?my-next-career=input-logic" className="text-white" style={{ fontSize: "1.25rem", textDecoration: "underline" }}>
+                Join the team
+              </a>
+            </div>
+            <div>
+              <h2 className="text-white text-xl font-bold mb-2">
+                Send us pizza 🍕
+              </h2>
+              <p className="text-white" style={{ fontSize: "1.25rem", marginBottom: "1.3em", fontWeight: "400" }}>
+                10 Victoria Crescent
+                <br />Nanaimo, BC V9R 5B9, Canada
+                <br />hello@inputlogic.ca
+              </p>
+            </div>
           </div>
-          <div>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              className={`w-full bg-gray-800 text-white px-4 py-2 rounded-md focus:outline-none ${formErrors.email ? 'border-red-500' : ''}`}
-            />
-            {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
+          <form onSubmit={handleSubmit} >
+            <div className="mb-6" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
+              <label htmlFor="name" className="sr-only">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                autoComplete="off"
+                placeholder="Name"
+                className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
+                maxLength={200}
+              />
+               {formErrors.name && <p className="text-red-500 mt-1">{formErrors.name}</p>}
+            </div>
+            <div className="mb-6" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
+              <label htmlFor="company" className="sr-only">
+                Company
+              </label>
+              <input
+                type="text"
+                name="company"
+                id="company"
+                value={formData.company}
+                onChange={handleChange}
+                autoComplete="off"
+                placeholder="Company"
+                className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
+                maxLength={200}
+              />
+            </div>
+            <div className="mb-6" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                autoComplete="off"
+                placeholder="Email"
+                className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
+                maxLength={200}
+              />
+               {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
+            </div>
+            <div className="mb-8" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
+              <label htmlFor="message" className="sr-only">
+                How can we help?
+              </label>
+              <input
+                type="text"
+                name="message"
+                id="message"
+                value={formData.message}
+                onChange={handleChange}
+                autoComplete="off"
+                placeholder="How can we help?"
+                className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
+                maxLength={200}
+              />
+               {formErrors.message && <p className="text-red-500 mt-1">{formErrors.message}</p>}
+            </div>
+            {/* <div className="mb-4">
+            <div className="flex flex-wrap">
+              <div className="mr-4 mb-2">
+                <input id="interest0" type="checkbox" name="interests" value="Web Development" className="mr-2" />
+                <label htmlFor="interest0" className="text-white">
+                  Web Development
+                </label>
+              </div>
+              <div className="mr-4 mb-2">
+                <input id="interest1" type="checkbox" name="interests" value="Design" className="mr-2" />
+                <label htmlFor="interest1" className="text-white">
+                  Design
+                </label>
+              </div>
+              <div className="mr-4 mb-2">
+                <input id="interest2" type="checkbox" name="interests" value="App Development" className="mr-2" />
+                <label htmlFor="interest2" className="text-white">
+                  App Development
+                </label>
+              </div>
+              <div className="mr-4 mb-2">
+                <input id="interest3" type="checkbox" name="interests" value="UX Strategy" className="mr-2" />
+                <label htmlFor="interest3" className="text-white">
+                  UX Strategy
+                </label>
+              </div>
+              <div className="mr-4 mb-2">
+                <input id="interest4" type="checkbox" name="interests" value="Product Growth" className="mr-2" />
+                <label htmlFor="interest4" className="text-white">
+                  Product Growth
+                </label>
+              </div>
+            </div>
           </div>
-          <div>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              rows={4}
-              className={`w-full bg-gray-800 text-white px-4 py-2 rounded-md focus:outline-none ${formErrors.message ? 'border-red-500' : ''}`}
-            />
-            {formErrors.message && <p className="text-red-500 mt-1">{formErrors.message}</p>}
-          </div>
-          <div className="text-center">
+          <div className="mb-8">
+            <div className="flex">
+              <div className="mr-4">
+                <input id="budget0" name="budget" type="radio" value="< $50k" className="mr-2" />
+                <label htmlFor="budget0" className="text-white">
+                  &lt; $50k
+                </label>
+              </div>
+              <div className="mr-4">
+                <input id="budget1" name="budget" type="radio" value="$50k - $100k" className="mr-2" />
+                <label htmlFor="budget1" className="text-white">
+                  $50k - $100k
+                </label>
+              </div>
+              <div className="mr-4">
+                <input id="budget2" name="budget" type="radio" value="$100k - $200k" className="mr-2" />
+                <label htmlFor="budget2" className="text-white">
+                  $100k - $200k
+                </label>
+              </div>
+              <div>
+                <input id="budget3" name="budget" type="radio" value="> $200k" className="mr-2" />
+                <label htmlFor="budget3" className="text-white">
+                  &gt; $200k
+                </label>
+              </div>
+            </div>
+          </div> */}
             <button
-              type="submit"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-md hover:bg-gradient-to-l hover:from-pink-500 hover:to-purple-500 transition-colors duration-300"
+              type="submit" style={{ margin: "4rem 0 0", padding: ".75rem 2.5rem", fontSize: "20px", border: "1px solid transparent" }}
+              className="bg-white text-black px-8 py-3 rounded-md hover:bg-gray-200 transition-colors duration-300"
             >
-              Submit
+              Get a quote
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-
       {/* Success Snackbar */}
       {successMessage && (
         <div className="fixed bottom-4 left-4 bg-green-500 text-white px-4 py-2 rounded-md">
@@ -140,5 +300,7 @@ export default function ContactForm() {
         </div>
       )}
     </>
-  )
-}
+  );
+};
+
+export default ContactSection;

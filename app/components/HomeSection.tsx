@@ -1,8 +1,14 @@
 "use client"
 import React from 'react';
 import scrollToSection from '../hooks/useScrollToSection';
+import { RefObject } from 'react';
 
-export default function HomeSection() {
+
+interface HomeSectionProps {
+    scrollContainerRef: RefObject<HTMLElement>;
+  }
+  
+  const Home = ({ scrollContainerRef}: HomeSectionProps ) => {
 
     return (
         <>
@@ -15,12 +21,12 @@ export default function HomeSection() {
                         Our expertise lies in crafting captivating single-page websites that not only enhance your online presence but also drive valuable leads your way. Let us create a digital masterpiece that elevates your brand and leaves a lasting impression on your audience.
                     </p>
                     <div className="flex justify-center flex-col sm:flex-row">
-                        <button onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToSection(e, 'contact')}
+                        <button onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToSection(e, 'contact', scrollContainerRef)}
                             className="bg-transparent hover:text-black hover:bg-white text-gray-300 py-2 px-4 border border-white-700 rounded mb-4 sm:mb-0 sm:mr-4"
                         >
                             Get Started!
                         </button>
-                        <button onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToSection(e, 'services')}
+                        <button onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToSection(e, 'services', scrollContainerRef)}
                             className="bg-white text-black hover:bg-blue-400 py-2 px-4 border border-white-700 rounded"
                         >
                             Learn More
@@ -31,3 +37,5 @@ export default function HomeSection() {
         </>
     )
 }
+
+export default Home;

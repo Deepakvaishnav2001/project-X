@@ -4,25 +4,48 @@
 
 html,
 body {
+  overflow: hidden;
   padding: 0;
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
 }
 
 #__next {
-  height: 100vh;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  height: 100vh;
 }
 
-section {
+section, #contact {
   scroll-snap-align: start;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   color: white;
+  height: 100vh;
 }
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-y::-webkit-scrollbar {
+  width: 0;
+}
+
+.snap-y::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#__next::-webkit-scrollbar {
+  width: 0;
+}
+
+#__next::-webkit-scrollbar-track {
+  background: transparent;
+}
+

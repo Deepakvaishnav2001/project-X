@@ -13,7 +13,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   const [activeLink, setActiveLink] = useState('home');
 
   const scrollToSection = (event: React.MouseEvent, sectionId: string) => {
-    scrollToSectionhook(event,sectionId)
+    scrollToSectionhook(event, sectionId, scrollContainerRef);
     setActiveLink(sectionId);
   };
 
@@ -42,7 +42,7 @@ const Navbar = ({ scrollContainerRef }: NavbarProps) => {
   }, [scrollContainerRef, handleScroll]);
 
   return (
-    <nav className={`${styles.navbar} flex flex-col md:flex-row`} >
+    <nav id="navbar" className={`${styles.navbar} flex flex-col md:flex-row p-0 md:p-4`} >
       <div className={styles.logoContainer}>
         <div className={styles.logo}>
             <h1 className='cursor-pointer' onClick={(e) => scrollToSection(e, 'home')}>OwnBrands</h1>

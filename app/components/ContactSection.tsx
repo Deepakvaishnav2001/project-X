@@ -106,9 +106,9 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h1 className="font-bold mb-8 text-white" style={{ fontSize: "5.75rem" }}>
+            <h1 className="font-bold text-white" style={{ fontSize: "5.75rem" }}>
               <div>
-                <p style={{ marginBottom: "0.8em", fontWeight: "400", fontSize: "5.75rem" }}>
+                <p style={{fontWeight: "400", fontSize: "5.75rem" }}>
                   <span style={{ opacity: "1" }}>
                     <span style={{ display: "inline-flex", overflow: "hidden" }}>
                       <span style={{ position: "relative", opacity: "1", transform: "none" }}>Say Hello</span>
@@ -155,7 +155,7 @@ const ContactForm = () => {
                 className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
                 maxLength={200}
               />
-               {formErrors.name && <p className="text-red-500 mt-1">{formErrors.name}</p>}
+               {formErrors.name && <p className="formError mt-1">{formErrors.name}</p>}
             </div>
             <div className="mb-6" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
               <label htmlFor="company" className="sr-only">
@@ -188,7 +188,7 @@ const ContactForm = () => {
                 className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
                 maxLength={200}
               />
-               {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
+               {formErrors.email && <p className="formError mt-1">{formErrors.email}</p>}
             </div>
             <div className="mb-8" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
               <label htmlFor="message" className="sr-only">
@@ -205,7 +205,7 @@ const ContactForm = () => {
                 className="bg-black border-b border-gray-600 text-white px-4 py-2 w-full focus:outline-none"
                 maxLength={200}
               />
-               {formErrors.message && <p className="text-red-500 mt-1">{formErrors.message}</p>}
+               {formErrors.message && <p className="formError mt-1">{formErrors.message}</p>}
             </div>
             {/* <div className="mb-4">
             <div className="flex flex-wrap">

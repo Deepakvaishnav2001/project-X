@@ -82,7 +82,37 @@ div.contact button {
   border: 1px solid transparent;
 }
 
+.about-us p {
+  font-size: .6em;
+}
 
+.about-top,
+.about-bottom {
+  display: flex;
+}
+.about-top-right img{
+  width: 80%;
+}
+
+.about-top-right {
+  width: 100%;
+}
+
+.about-top,
+.about-bottom {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-bottom {
+  margin-top: 15px;
+}
+
+.about-bottom-right {
+  width: 80%;
+}
 
 @media screen and (max-width: 932px) {
   .contact-us-desc {

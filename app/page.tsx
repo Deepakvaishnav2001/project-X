@@ -57,10 +57,10 @@ export default function Home() {
                 <section id="home" className="bg-transparent">
                     <HomeSection scrollContainerRef={scrollContainerRef} />
                 </section>
-                <section id="services" style={{ background: '#fff4fa' }}>
+                <section id="services" style={{ background: '#000000' }}>
                     <Services1Section />
                 </section>
-                <section id="about" style={{ background: '#fff4fa' }}>
+                <section id="about" className="bg-black h-screen flex flex-col px-4">
                     <AboutSection />
                 </section>
                 <section id="contact" className="bg-black h-screen flex flex-col justify-center items-center px-4">

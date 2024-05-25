@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
@@ -7,15 +8,15 @@ const ContactSection = () => {
     setShowForm(!showForm);
   };
 
-  return (<div className='flex flex-col flex-grow justify-center items-center'>
+  return (<div className='contact flex flex-col flex-grow justify-center items-center'>
     {!showForm ? (<>
-    <h1 className="text-white text-4xl font-bold text-center mb-8" style={{ margin: "0 0 .65em", fontSize: "82px" }}>
+    <h1 className="title text-white text-4xl font-bold text-center mb-8" style={{ margin: "0 0 .65em"}} >
       Let&apos;s work together
       </h1>
-      <p className="text-black text-center" style={{ maxWidth: "900px", margin: "0 auto", fontSize: "30px", lineHeight: "1.5", color: "var(--foreground)" }}>
+      <p className="text-center" style={{}}>
         We&apos;re addicts for the high we get when launching apps we&apos;re proud of. If you&apos;re ready to dig in and make some magic together, drop us a line.
         </p>
-      <button className="bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-300" style={{ margin: "4rem 0 0", padding: ".75rem 2.5rem", fontSize: "20px", fontWeight: "500", border: "1px solid transparent" }} onClick={toggleForm} >
+      <button className="bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-300" style={{}} onClick={toggleForm} >
         Get in touch
         </button>
         </>
@@ -100,7 +101,6 @@ const ContactForm = () => {
     }
   }
 
-
   return (
     <>
       <div className="container mx-auto px-4">
@@ -111,43 +111,35 @@ const ContactForm = () => {
                 <p style={{ marginBottom: "0.8em", fontWeight: "400", fontSize: "5.75rem" }}>
                   <span style={{ opacity: "1" }}>
                     <span style={{ display: "inline-flex", overflow: "hidden" }}>
-                      <span style={{ position: "relative", opacity: "1", transform: "none" }}>Say&nbsp;
-                      </span>
+                      <span style={{ position: "relative", opacity: "1", transform: "none" }}>Say Hello</span>
                     </span>
-                    <span style={{ display: "inline-flex", overflow: "hidden" }}>
-                      <span style={{ position: "relative", opacity: "1", transform: "none" }}>hello&nbsp;
+                    {/* <span style={{ display: "inline-flex", overflow: "hidden" }}>
+                      <span style={{ position: "relative", opacity: "1", transform: "none" }}>
+                        <Image src='/images/namaste.jpg' alt="Namaste" width={100} height={100} />
                       </span>
-                    </span>
+                    </span> */}
                   </span>
                 </p>
               </div>
             </h1>
-            <div className="text-white mb-8">
+            <div className="contact-us-desc text-white mb-8">
               <p style={{ fontSize: "1.5rem", color: "rgb(255 255 255 / var(--tw-text-opacity))", transition: "color .5s ease-in-out", marginBottom: "1.3em", fontWeight: "400" }}>Ready to create your dream app?
               </p>
               <p style={{ fontSize: "1.5rem", color: "rgb(255 255 255 / var(--tw-text-opacity))", transition: "color .5s ease-in-out", marginBottom: "1.3em", fontWeight: "400" }}>We&apos;re your one-stop-shop for everything you need to launch a lovable digital product.
               </p>
             </div>
-            <div style={{ margin: "1.5rem 0 1.5rem" }}>
-              <h2 className="text-white text-xl font-bold mb-2">
-                Careers
-              </h2>
-              <a href="/about?my-next-career=input-logic" className="text-white" style={{ fontSize: "1.25rem", textDecoration: "underline" }}>
-                Join the team
-              </a>
-            </div>
-            <div>
+            {/* <div>
               <h2 className="text-white text-xl font-bold mb-2">
                 Send us pizza 🍕
               </h2>
               <p className="text-white" style={{ fontSize: "1.25rem", marginBottom: "1.3em", fontWeight: "400" }}>
                 10 Victoria Crescent
                 <br />Nanaimo, BC V9R 5B9, Canada
-                <br />hello@inputlogic.ca
+                <br />hello@example.com
               </p>
-            </div>
+            </div> */}
           </div>
-          <form onSubmit={handleSubmit} >
+          <form className="contact-form" onSubmit={handleSubmit} >
             <div className="mb-6" style={{ width: "100%", fontSize: "1.125rem", fontWeight: "400" }}>
               <label htmlFor="name" className="sr-only">
                 Name

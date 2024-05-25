@@ -19,7 +19,8 @@ body {
   height: 100vh;
 }
 
-section, #contact {
+section,
+#contact {
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
@@ -49,3 +50,72 @@ section, #contact {
   background: transparent;
 }
 
+/* contact us style */
+.contact-form {
+  padding-top: 10%;
+}
+
+h1.title {
+  font-size: 5.15rem;
+}
+
+div.contact p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--foreground);
+}
+
+div.contact button{
+  margin: 4rem 0 0;
+  padding: .75rem 2.5rem;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+@media screen and (max-width: 932px) {
+  .contact-us-desc {
+    display: none;
+  }
+
+  h1.title {
+    font-size: 2.5rem;
+  }
+  div.contact p {
+    font-size: 1.4rem;
+  }
+  div.contact button{
+    padding: .5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+      min-height: 100vh;
+  }
+  html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  } 
+  /* #__next {
+    height: 102vh;
+  } */
+ 
+  .contact-us-desc {
+    display: none;
+  }
+
+  h1.title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  
+}

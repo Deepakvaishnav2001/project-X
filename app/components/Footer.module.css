@@ -27,14 +27,16 @@
 }
 
 .FooterLinks li {
-  margin: 0 .75rem;} 
+  margin: 0 .75rem;
+} 
 
 .FooterLink {
   color: white;
   text-decoration: none;
-  margin: 0 1.5rem;
+  margin: 0 0.2rem;
   padding-bottom: 0.25rem;
   position: relative;
+  display:block;
 }
 
 .footer .container {
@@ -96,4 +98,17 @@
 
 .footer .btn-outline:hover,.btn-primary:hover {
   transform: scale(1.05)
+}
+@media screen and (max-width: 767px) {
+  /* .FooterLink {
+    display:inline;
+  } */
+  
+  .FooterLink{
+    width:100%;
+    margin: 0 1rem;
+  }
+  .footer li {
+      margin: unset;
+  }
 }

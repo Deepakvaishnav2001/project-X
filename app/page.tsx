@@ -6,7 +6,7 @@ import HomeSection from "./components/HomeSection";
 import ContactSection from "./components/ContactSection";
 import AboutSection from "./components/AboutSection";
 import ProgressBar from "./components/ProgressBar";
-import Services1Section from "./components/ServicesSection";
+import ServicesSection from "./components/ServicesSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -19,6 +19,7 @@ export default function Home() {
             const scrollTop = scrollContainerRef.current?.scrollTop;
             const homeSection = document.getElementById("home");
             const contactSection = document.getElementById("contact");
+            console.log(scrollTop);
 
             if (
                 scrollTop >= homeSection?.offsetTop &&
@@ -48,7 +49,6 @@ export default function Home() {
                 <div className="sticky z-20">
                     <Navbar
                         scrollContainerRef={scrollContainerRef}
-                        setShowNavbar={setShowNavbar}
                     />
                 </div>
             )}
@@ -58,9 +58,9 @@ export default function Home() {
                     <HomeSection scrollContainerRef={scrollContainerRef} />
                 </section>
                 <section id="services" className="bg-black">
-                    <Services1Section />
+                    <ServicesSection />
                 </section>
-                <section id="about" className="bg-black flex flex-col px-4">
+                <section id="about" className="bg-black">
                     <AboutSection />
                 </section>
                 <section id="contact" className="bg-black flex flex-col justify-center items-center px-4">

@@ -1,20 +1,15 @@
 export default function ServicesSection() {
 
-
-
     return (
-        <div className="max-w-7xl mx-auto">
-            <div id="services-heading" className="text-3xl bg-black font-bold text-center text-white sticky top-0 z-10">
-                <h2>
-                    What We Do
-                </h2>
-                <hr />
-                {/* <p className="text-lg text-white text-center">
-                    We offer a wide range of services to meet your business needs.
-                </p> */}
-            </div>
-            <div className="snap-y snap-mandatory overflow-y-auto h-screen">
-                <section id="service1" className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
+        <>
+            <div className="max-w-7xl mx-auto snap-y snap-mandatory overflow-y-auto h-screen">
+                <div id="services-heading" className="text-3xl bg-black font-bold text-center text-white sticky top-0 z-10">
+                    <h2>
+                        What We Do
+                    </h2>
+                    <hr />
+                </div>
+                <section className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
                     <div
                         className="service-img relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                         <img
@@ -43,7 +38,7 @@ export default function ServicesSection() {
                             </svg></button></a>
                     </div>
                 </section>
-                <section id="service2" className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
+                <section className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
                     <div
                         className="service-img relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                         <img
@@ -56,7 +51,7 @@ export default function ServicesSection() {
                             experience
                         </h6>
                         <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                        We're a small but mighty team with deep experience,
+                            We're a small but mighty team with deep experience,
                         </h4>
                         <p className="block mb-2 font-sans text-base antialiased font-normal leading-relaxed text-white">
                             We're a small but mighty team with deep experience, good vibes, and an addiction to solving interesting problems.
@@ -70,7 +65,7 @@ export default function ServicesSection() {
                             </svg></button></a>
                     </div>
                 </section>
-                <section id="service3" className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
+                <section className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
                     <div
                         className="service-img relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                         <img
@@ -100,6 +95,6 @@ export default function ServicesSection() {
                     </div>
                 </section>
             </div>
-        </div>
+        </>
     )
 }

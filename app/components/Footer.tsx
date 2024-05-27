@@ -13,15 +13,12 @@ const Footer: React.FC = () => {
             <div>
                 <ul className={Styles.FooterLinks}>
                     <li className={Styles.footerli}>
-                        <a
-                            className={`${Styles.FooterLink} cursor-pointer`}
-                        >
+                        <a className={`${Styles.FooterLink} cursor-pointer`}>
                             Newsletter
                         </a>
                     </li>
                     <li className={Styles.footerli}>
-                        <a
-                            className={Styles.FooterLink}
+                        <a  className={Styles.FooterLink}
                             href="https://dribbble.com/inputlogic"
                             target="_blank"
                             rel="noreferrer"
@@ -30,8 +27,7 @@ const Footer: React.FC = () => {
                         </a>
                     </li>
                     <li className={Styles.footerli}>
-                        <a
-                            className={Styles.FooterLink}
+                        <a  className={Styles.FooterLink}
                             href="https://twitter.com/inputlogic"
                             target="_blank"
                             rel="noreferrer"
@@ -40,8 +36,7 @@ const Footer: React.FC = () => {
                         </a>
                     </li>
                     <li className={Styles.footerli}>
-                        <a
-                            className={Styles.FooterLink}
+                        <a  className={Styles.FooterLink}
                             href="https://www.instagram.com/inputlife"
                             target="_blank"
                             rel="noreferrer"

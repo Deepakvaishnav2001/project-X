@@ -23,7 +23,7 @@ section,
 #contact {
   scroll-snap-align: start;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 2rem;
   color: white;
@@ -90,7 +90,8 @@ div.contact button {
 .about-bottom {
   display: flex;
 }
-.about-top-right img{
+
+.about-top-right img {
   width: 80%;
 }
 
@@ -127,6 +128,12 @@ div.contact button {
     font-size: 1.4rem;
   }
 
+  .about-top,
+  .about-bottom {
+    display: block;
+  }
+
+
   div.contact button {
     padding: .5rem 1.5rem;
   }
@@ -142,6 +149,19 @@ div.contact button {
     margin: 0;
     padding: 0;
     height: 100%;
+  }
+
+
+  .about-bottom {
+    display: none;
+  }
+
+  .about-top-left {
+    line-height: 1.2;
+  }
+
+  .about-top-right img {
+    width: 100%;
   }
 
   * {

@@ -1,47 +1,106 @@
 export default function ServicesSection() {
 
+
+
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-4 text-center text-white">
-                Our Services
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-8">
-                We offer a wide range of services to meet your business needs.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div className="p-6">
-                        <h3 className="text-xl font-bold mb-4 text-white">
-                            Custom Website Design
-                        </h3>
-                        <p className="text-gray-300">
-                            We create stunning, responsive, and user-friendly websites tailored
-                            to your business needs.
-                        </p>
+        <div className="max-w-7xl mx-auto">
+            <div id="services-heading" className="text-3xl bg-black font-bold text-center text-white sticky top-0 z-10">
+                <h2>
+                    What We Do
+                </h2>
+                <hr />
+                {/* <p className="text-lg text-white text-center">
+                    We offer a wide range of services to meet your business needs.
+                </p> */}
+            </div>
+            <div className="snap-y snap-mandatory overflow-y-auto h-screen">
+                <section id="service1" className="snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-row">
+                    <div
+                        className="relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                        <img
+                            src="next.svg"
+                            alt="card-image" className="object-cover w-full h-full" />
                     </div>
-                </div>
-                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                     <div className="p-6">
-                        <h3 className="text-xl font-bold mb-4 text-white">
-                            Lead Generation
-                        </h3>
-                        <p className="text-gray-300">
-                            Our websites are designed to capture leads and convert them into
-                            customers for your business.
+                        <h6
+                            className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-white uppercase">
+                            startups
+                        </h6>
+                        <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-white">
+                            Lyft launching cross-platform service this week
+                        </h4>
+                        <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-white">
+                            Like so many organizations these days, Autodesk is a company in
+                            transition. It was until recently a traditional boxed software company
+                            selling licenses. Yet its own business model disruption is only part of
+                            the story
                         </p>
+                        <a href="#" className="inline-block"><button
+                            className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                            type="button">
+                            Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" className="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                            </svg></button></a>
                     </div>
-                </div>
-                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                </section>
+                <section id="service2" className="snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-row">
+                    <div
+                        className="relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                        <img
+                            src="next.svg"
+                            alt="card-image" className="object-cover w-full h-full" />
+                    </div>
                     <div className="p-6">
-                        <h3 className="text-xl font-bold mb-4 text-white">
-                            Search Engine Optimization
-                        </h3>
-                        <p className="text-gray-300">
-                            We optimize your website for search engines, ensuring maximum
-                            visibility and organic traffic.
+                        <h6
+                            className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-white uppercase">
+                            experience
+                        </h6>
+                        <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        We're a small but mighty team with deep experience,
+                        </h4>
+                        <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-white">
+                            We're a small but mighty team with deep experience, good vibes, and an addiction to solving interesting problems.
                         </p>
+                        <a href="#" className="inline-block"><button
+                            className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                            type="button">
+                            Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" className="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                            </svg></button></a>
                     </div>
-                </div>
+                </section>
+                <section id="service3" className="snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-row">
+                    <div
+                        className="relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                        <img
+                            src="next.svg"
+                            alt="card-image" className="object-cover w-full h-full" />
+                    </div>
+                    <div className="p-6">
+                        <h6
+                            className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-white uppercase">
+                            startups
+                        </h6>
+                        <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                            Lyft launching cross-platform service this week
+                        </h4>
+                        <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-white">
+                            Like so many organizations these days, Autodesk is a company in
+                            transition. It was until recently a traditional boxed software company
+                            selling licenses. Yet its own business model disruption is only part of
+                            the story
+                        </p>
+                        <a href="#" className="inline-block"><button
+                            className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                            type="button">
+                            Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" className="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                            </svg></button></a>
+                    </div>
+                </section>
             </div>
         </div>
     )

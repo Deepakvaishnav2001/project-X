@@ -6,7 +6,7 @@ import HomeSection from "./components/HomeSection";
 import ContactSection from "./components/ContactSection";
 import AboutSection from "./components/AboutSection";
 import ProgressBar from "./components/ProgressBar";
-import Services1Section from "./components/Services1Section";
+import Services1Section from "./components/ServicesSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -57,13 +57,13 @@ export default function Home() {
                 <section id="home" className="bg-transparent">
                     <HomeSection scrollContainerRef={scrollContainerRef} />
                 </section>
-                <section id="services" style={{ background: '#000000' }}>
+                <section id="services" className="bg-black">
                     <Services1Section />
                 </section>
-                <section id="about" className="bg-black h-screen flex flex-col px-4">
+                <section id="about" className="bg-black flex flex-col px-4">
                     <AboutSection />
                 </section>
-                <section id="contact" className="bg-black h-screen flex flex-col justify-center items-center px-4">
+                <section id="contact" className="bg-black flex flex-col justify-center items-center px-4">
                     < ContactSection />
                     < Footer />
                 </section>

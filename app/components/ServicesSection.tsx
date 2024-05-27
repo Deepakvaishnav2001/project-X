@@ -14,11 +14,11 @@ export default function ServicesSection() {
                 </p> */}
             </div>
             <div className="snap-y snap-mandatory overflow-y-auto h-screen">
-                <section id="service1" className="snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-row">
+                <section id="service1" className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
                     <div
-                        className="relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                        className="service-img relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                         <img
-                            src="next.svg"
+                            src="images/services/seo.jpg"
                             alt="card-image" className="object-cover w-full h-full" />
                     </div>
                     <div className="p-6">
@@ -29,11 +29,10 @@ export default function ServicesSection() {
                         <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-white">
                             Lyft launching cross-platform service this week
                         </h4>
-                        <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-white">
+                        <p className="block mb-2 font-sans text-base antialiased font-normal leading-relaxed text-white">
                             Like so many organizations these days, Autodesk is a company in
                             transition. It was until recently a traditional boxed software company
-                            selling licenses. Yet its own business model disruption is only part of
-                            the story
+                            selling licenses.
                         </p>
                         <a href="#" className="inline-block"><button
                             className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
@@ -44,11 +43,11 @@ export default function ServicesSection() {
                             </svg></button></a>
                     </div>
                 </section>
-                <section id="service2" className="snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-row">
+                <section id="service2" className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
                     <div
-                        className="relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                        className="service-img relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                         <img
-                            src="next.svg"
+                            src="images/services/speed-opt.png"
                             alt="card-image" className="object-cover w-full h-full" />
                     </div>
                     <div className="p-6">
@@ -59,7 +58,7 @@ export default function ServicesSection() {
                         <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         We're a small but mighty team with deep experience,
                         </h4>
-                        <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-white">
+                        <p className="block mb-2 font-sans text-base antialiased font-normal leading-relaxed text-white">
                             We're a small but mighty team with deep experience, good vibes, and an addiction to solving interesting problems.
                         </p>
                         <a href="#" className="inline-block"><button
@@ -71,11 +70,11 @@ export default function ServicesSection() {
                             </svg></button></a>
                     </div>
                 </section>
-                <section id="service3" className="snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-row">
+                <section id="service3" className="services snap-start relative flex bg-clip-border rounded-xl text-white shadow-md flex-col md:flex-row">
                     <div
-                        className="relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                        className="service-img relative w-2/5 m-0 overflow-hidden text-white bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                         <img
-                            src="next.svg"
+                            src="images/services/website-generation.jpg"
                             alt="card-image" className="object-cover w-full h-full" />
                     </div>
                     <div className="p-6">
@@ -86,11 +85,10 @@ export default function ServicesSection() {
                         <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                             Lyft launching cross-platform service this week
                         </h4>
-                        <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-white">
+                        <p className="block mb-2 font-sans text-base antialiased font-normal leading-relaxed text-white">
                             Like so many organizations these days, Autodesk is a company in
                             transition. It was until recently a traditional boxed software company
-                            selling licenses. Yet its own business model disruption is only part of
-                            the story
+                            selling licenses.
                         </p>
                         <a href="#" className="inline-block"><button
                             className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"

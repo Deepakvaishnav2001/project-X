@@ -29,11 +29,15 @@ section {
   height: 100vh;
 }
 
-div#services-heading {
+.services {
+  justify-content: center;
+}
+
+#services-heading {
   padding-top: 1.2rem;
 }
 
-div#services-heading h2{
+#services-heading h2{
   padding-bottom: 1.2rem;
 }
 
@@ -113,6 +117,10 @@ div.contact button {
   width: 90%;
   margin: 0 auto;
   align-items: center;
+}
+
+.service-img{
+  min-width: 320px;
 }
 
 #services-heading hr {
